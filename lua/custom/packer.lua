@@ -45,5 +45,20 @@ return require('packer').startup(function(use)
 	  }
 	}
 ---
- use {'neovim/nvim-lsp' }
+  use {
+      'fatih/vim-go',
+      run = ':GoUpdateBinaries'
+    }
+
+  use {'neovim/nvim-lsp' }
+
+  use 'mfussenegger/nvim-dap'
+
+  use {
+    'lewis6991/gitsigns.nvim',
+    -- tag = 'release' -- To use the latest release (do not use this if you run Neovim nightly or dev builds!)
+  }
+
+  use { "aserowy/tmux.nvim" }
+
 end)
